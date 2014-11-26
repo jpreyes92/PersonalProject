@@ -1,0 +1,20 @@
+﻿@model CIS440Project.Models.GroupDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GroupDB</legend>
+
+    <div class="display-label">GroupName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GroupName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.GroupID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

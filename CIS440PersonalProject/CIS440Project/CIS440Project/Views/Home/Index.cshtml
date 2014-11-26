@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CIS440Project.Models.ProjectDB>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CIS 440 Projects</h2>
+
+
+@foreach (var item in Model) {
+    <fieldset id="iprojects">
+        <legend>Project</legend>
+    <div id="ProjectTitle">
+            @Html.DisplayFor(modelItem => item.ProjectName)   
+           
+        </div>
+    <div id="ProjectDescription" hidden>  
+            @Html.DisplayFor(modelItem => item.Description)
+        </div>
+    <div id="CompanyName" hidden>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </div>
+
+        <div id ="image" hidden>
+            @Html.DisplayFor(modelItem => item.Image)
+        </div>
+        <div id="blank">
+
+            </div>
+    </fieldset>
+}
+   

@@ -1,0 +1,35 @@
+﻿@model CIS440Project.Models.ProjectDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ProjectDB</legend>
+
+    <div class="display-label">ProjectName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProjectName)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">CompanyName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+
+    <div class="display-label">Image</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Image)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProjectID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
